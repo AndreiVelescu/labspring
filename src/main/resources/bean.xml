@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="professor" class="com.example.labspring.Classes.Professor">
+        <constructor-arg value="Andriuha" />
+        <constructor-arg value="45" />
+        <constructor-arg value="andriuha@example.com" />
+        <constructor-arg value="Math" />
+        <constructor-arg value="Dr." />
+    </bean>
+
+
+    <bean id="course" class="com.example.labspring.Classes.Course">
+
+        <constructor-arg value="Math 101" />
+        <constructor-arg value="MTH101" />
+        <constructor-arg value="Math Department" />
+        <constructor-arg value="3" />
+        <constructor-arg ref="professor" />
+    </bean>
+
+    <bean id="student" class="com.example.labspring.Classes.Student">
+        <constructor-arg value="Andr" />
+        <constructor-arg value="20" />
+        <constructor-arg value="andr@example.com" />
+        <constructor-arg value="Inf" />
+        <constructor-arg value="9" />
+        <constructor-arg ref="course" />
+    </bean>
+
+</beans>
